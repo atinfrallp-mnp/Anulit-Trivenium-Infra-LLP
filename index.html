@@ -3,333 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anulit Trivenium Infra LLP</title>
-
+<title>Anulit Trivenium Infra LLP | Engineering Excellence</title>
+<!-- Google Fonts for Professional Look -->
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+<link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap)" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif;}
-
-body{
-background:#f4f6f9;
-color:#333;
-line-height:1.6;
+/* Reset & Base Styles */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;
 }
-
-.hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+:root {
+--primary-color: #0F172A; /* Deep Slate Blue */
+--secondary-color: #1E293B;
+--accent-color: #E2B13C; /* Premium Gold */
+--text-color: #334155;
+--bg-light: #F8FAFC;
+}
+html {
+scroll-behavior: smooth;
+}
+body {
+background: var(--bg-light);
+color: var(--text-color);
+line-height: 1.7;
+}
+h1, h2, h3 {
+font-family: 'Outfit', sans-serif;
+font-weight: 700;
+}
+/* Header & Nav */
+nav {
+background: rgba(15, 23, 42, 0.95);
+backdrop-filter: blur(10px);
+padding: 20px 8%;
+position: sticky;
+top: 0;
+z-index: 999;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logo-text {
+color: white;
+font-size: 20px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+.logo-text span {
+color: var(--accent-color);
+}
+.nav-links a {
+color: #E2E8F0;
+text-decoration: none;
+margin-left: 25px;
+font-weight: 500;
+font-size: 15px;
+transition: color 0.3s ease;
+}
+.nav-links a:hover {
+color: var(--accent-color);
+}
+/* Hero Section */
+.hero {
+height: 85vh;
+background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)),
 url('https://images.unsplash.com/photo-1504307651254-35680f356dfd');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+padding: 0 20px;
 }
-
-.hero h1{
-font-size:55px;
-margin-bottom:15px;
+.hero-content {
+max-width: 850px;
 }
-
-.hero p{
-font-size:22px;
-color:#ffc107;
+.hero h1 {
+font-size: 52px;
+letter-spacing: -0.5px;
+line-height: 1.2;
+margin-bottom: 20px;
+text-transform: uppercase;
 }
-
-nav{
-background:#002D72;
-padding:15px;
-position:sticky;
-top:0;
-z-index:999;
-text-align:center;
+.hero p {
+font-size: 20px;
+color: #94A3B8;
+margin-bottom: 30px;
+font-weight: 300;
 }
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
+.cta-btn {
+display: inline-block;
+padding: 12px 30px;
+background: var(--accent-color);
+color: var(--primary-color);
+text-decoration: none;
+font-weight: 600;
+border-radius: 6px;
+transition: all 0.3s ease;
 }
-
-section{
-padding:80px 8%;
+.cta-btn:hover {
+background: white;
+transform: translateY(-2px);
 }
-
-.section-title{
-text-align:center;
-font-size:38px;
-color:#002D72;
-margin-bottom:40px;
+/* Section Common Styling */
+section {
+padding: 100px 8%;
 }
-
-.logo-card{
-max-width:900px;
-margin:auto;
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-text-align:center;
+.section-title {
+text-align: center;
+font-size: 36px;
+color: var(--primary-color);
+margin-bottom: 15px;
+position: relative;
 }
-
-.logo-card img{
-max-width:100%;
-border-radius:10px;
+.section-title::after {
+content: '';
+display: block;
+width: 60px;
+height: 4px;
+background: var(--accent-color);
+margin: 12px auto 0;
+border-radius: 2px;
 }
-
-.about{
-max-width:1000px;
-margin:auto;
-text-align:center;
-font-size:18px;
+.section-subtitle {
+text-align: center;
+max-width: 600px;
+margin: 0 auto 50px;
+color: #64748B;
 }
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+/* About Section */
+#about {
+background: white;
 }
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+.logo-card {
+max-width: 800px;
+margin: auto;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-
-.card h3{
-color:#002D72;
-margin-bottom:10px;
+.logo-card img {
+width: 100%;
+display: block;
 }
-
-.team-card{
-background:white;
-padding:25px;
-margin:20px auto;
-max-width:950px;
-border-left:6px solid #f4b400;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+.about-text {
+max-width: 800px;
+margin: 40px auto 0;
+text-align: center;
+font-size: 18px;
+color: #475569;
+line-height: 1.8;
 }
-
-.team-card h3{
-color:#002D72;
+/* Services Grid */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
 }
-
-.highlight{
-background:#002D72;
-color:white;
-border-radius:15px;
-padding:35px;
+.card {
+background: white;
+padding: 40px 30px;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+transition: all 0.3s ease;
+border-top: 4px solid transparent;
 }
-
-.highlight ul{
-list-style:none;
-font-size:20px;
+.card:hover {
+transform: translateY(-5px);
+border-top: 4px solid var(--accent-color);
+box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
-
-.highlight li{
-padding:10px 0;
+.card h3 {
+color: var(--primary-color);
+font-size: 20px;
+margin-bottom: 15px;
 }
-
-.contact{
-background:white;
-padding:30px;
-max-width:900px;
-margin:auto;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-text-align:center;
+/* Leadership & Team Section */
+#leadership {
+background: white;
 }
-
-footer{
-background:#002D72;
-color:white;
-text-align:center;
-padding:20px;
+.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 30px;
+margin-bottom: 60px;
 }
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
+.team-card {
+background: var(--bg-light);
+padding: 30px;
+border-radius: 12px;
+border-left: 5px solid var(--accent-color);
+box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+.team-card h3 {
+color: var(--primary-color);
+font-size: 20px;
+margin-bottom: 5px;
+}
+.team-card .designation {
+color: #64748B;
+font-weight: 600;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 15px;
+}
+.team-card p {
+font-size: 15px;
+margin-bottom: 8px;
+}
+/* Why Choose Us Feature Board */
+.highlight {
+background: var(--primary-color);
+color: white;
+border-radius: 16px;
+padding: 50px;
+}
+.highlight-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 25px;
+}
+.highlight-item {
+display: flex;
+align-items: center;
+font-size: 18px;
+font-weight: 500;
+}
+.highlight-item span {
+color: var(--accent-color);
+margin-right: 15px;
+font-size: 22px;
+}
+/* Contact Section */
+.contact-container {
+background: white;
+padding: 50px;
+max-width: 900px;
+margin: auto;
+border-radius: 16px;
+box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+.contact-info {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+text-align: left;
+margin-bottom: 30px;
+}
+.info-box h4 {
+color: var(--primary-color);
+margin-bottom: 5px;
+}
+/* Reviews Section */
+#reviews {
+background: #F1F5F9;
+text-align: center;
+}
+.review-btn {
+display: inline-block;
+margin-top: 20px;
+padding: 14px 35px;
+background: var(--primary-color);
+color: white;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 600;
+transition: background 0.3s;
+}
+.review-btn:hover {
+background: #1E293B;
+}
+/* Footer */
+footer {
+background: var(--primary-color);
+color: #94A3B8;
+text-align: center;
+padding: 30px;
+font-size: 14px;
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+/* Responsive Customization */
+@media(max-width: 768px) {
+.hero h1 { font-size: 36px; }
+nav { flex-direction: column; gap: 15px; text-align: center; }
+.nav-links a { margin: 0 10px; }
+section { padding: 60px 5%; }
+.contact-container { padding: 25px; }
 }
 </style>
 </head>
-
 <body>
-
-<div class="hero">
-<div>
-<h1>ANULIT TRIVENIUM INFRA LLP</h1>
-<p>Crafting Infrastructure with Integrity & Innovation</p>
-</div>
-</div>
-
+<!-- Navigation Bar -->
 <nav>
+<div class="logo-text">ANULIT <span>TRIVENIUM</span></div>
+<div class="nav-links">
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#leadership">Leadership</a>
 <a href="#contact">Contact</a>
+</div>
 </nav>
-
+<!-- Hero Section -->
+<div class="hero">
+<div class="hero-content">
+<h1>Anulit Trivenium Infra LLP</h1>
+<p>Crafting Infrastructure with Integrity & Innovation</p>
+<a href="#contact" class="cta-btn">Connect With Us</a>
+</div>
+</div>
+<!-- About Section -->
 <section id="about">
 <h2 class="section-title">About Us</h2>
-
+<p class="section-subtitle">Building robust foundations for a better tomorrow</p>
 <div class="logo-card">
 <img src="banner.jpg.jpeg" alt="Company Profile">
 </div>
-
-<br><br>
-
-<div class="about">
-Anulit Trivenium Infra LLP is a professional civil construction and infrastructure company dedicated to delivering quality workmanship, engineering excellence and reliable project execution. We specialize in infrastructure development, RCC structures, roads, drainage systems, surveying and project management.
+<div class="about-text">
+Anulit Trivenium Infra LLP is a professional civil construction and infrastructure company dedicated to delivering quality workmanship, engineering excellence, and reliable project execution. We specialize in infrastructure development, RCC structures, roads, drainage systems, surveying, and project management.
 </div>
 </section>
-
-<section id="services">
+<!-- Services Section -->
+<section id="services" style="background: var(--bg-light);">
 <h2 class="section-title">Our Services</h2>
-
+<p class="section-subtitle">Comprehensive construction and engineering solutions customized for modern infra requirements.</p>
 <div class="grid">
-
 <div class="card">
 <h3>Road Construction</h3>
-<p>Road development and transportation infrastructure.</p>
+<p>High-quality road development and robust transportation infrastructure networks.</p>
 </div>
-
 <div class="card">
 <h3>RCC Structures</h3>
-<p>Durable reinforced concrete structures and foundations.</p>
+<p>Durable reinforced concrete structures built with extreme engineering precision.</p>
 </div>
-
 <div class="card">
 <h3>Drainage & Canal Works</h3>
-<p>Water management and drainage infrastructure solutions.</p>
+<p>Advanced water management layouts and drainage infrastructure solutions.</p>
 </div>
-
 <div class="card">
 <h3>Survey & Estimation</h3>
-<p>Accurate surveying, planning and estimation services.</p>
+<p>Accurate surveying, feasibility planning, and transparent estimation services.</p>
 </div>
-
 <div class="card">
 <h3>Project Management</h3>
-<p>End-to-end execution and monitoring.</p>
+<p>End-to-end operational execution, quality auditing, and timeline monitoring.</p>
 </div>
-
 <div class="card">
 <h3>Infrastructure Development</h3>
-<p>Comprehensive infrastructure solutions.</p>
+<p>Turnkey infrastructure and heavy engineering services for public & private sectors.</p>
 </div>
-
 </div>
 </section>
-
+<!-- Leadership Section -->
 <section id="leadership">
 <h2 class="section-title">Our Leadership Team</h2>
-
+<p class="section-subtitle">Guided by qualified tech experts and veteran civil engineers.</p>
+<div class="team-grid">
 <div class="team-card">
 <h3>Er. Anurag Singh Rajput</h3>
-<p><b>Founder & Designated Partner</b></p>
-<p>B.Tech Civil Engineering</p>
-<p><b>Role:</b> Strategic Planning, Technical Design & Overall Operations</p>
-<p><b>Experience:</b> 6+ Years in Civil Construction & Project Management</p>
+<div class="designation">Founder & Designated Partner</div>
+<p><b>Qualification:</b> B.Tech Civil Engineering</p>
+<p><b>Role:</b> Strategic Planning, Technical Design & Operations</p>
+<p><b>Experience:</b> 6+ Years in Civil Construction</p>
 </div>
-
 <div class="team-card">
 <h3>Er. Lalit Rajput</h3>
-<p><b>Designated Partner</b></p>
-<p>B.Tech Civil Engineering</p>
+<div class="designation">Designated Partner</div>
+<p><b>Qualification:</b> B.Tech Civil Engineering</p>
 <p><b>Role:</b> Project Execution, Site Management & Billing</p>
-<p><b>Experience:</b> 6+ Years in On-Site Construction Management</p>
+<p><b>Experience:</b> 6+ Years in On-Site Operations</p>
 </div>
-
 <div class="team-card">
 <h3>Er. Anurudhha Rajput</h3>
-<p><b>Designated Partner</b></p>
-<p>B.Tech Civil Engineering</p>
+<div class="designation">Designated Partner</div>
+<p><b>Qualification:</b> B.Tech Civil Engineering</p>
 <p><b>Role:</b> Quality Control, Liaisoning & Compliance</p>
-<p><b>Experience:</b> 6+ Years in QA/QC</p>
+<p><b>Experience:</b> 6+ Years in QA/QC Management</p>
 </div>
-
-<h2 class="section-title">Core Project Team</h2>
-
+</div>
+<h2 class="section-title" style="margin-top: 40px;">Core Project Team</h2>
+<p class="section-subtitle">The force driving our ground execution.</p>
+<div style="max-width: 500px; margin: auto;">
 <div class="team-card">
 <h3>Er. Bhagat Singh Rajput</h3>
-<p><b>Project Manager</b></p>
-<p>Diploma Civil Engineering</p>
-<p><b>Experience:</b> 10+ Years</p>
-<p><b>Role:</b> On-Site Project Management & Coordination</p>
+<div class="designation">Project Manager</div>
+<p><b>Qualification:</b> Diploma Civil Engineering</p>
+<p><b>Role:</b> On-Site Project Coordination & Delivery</p>
+<p><b>Experience:</b> 10+ Years of Field Mastery</p>
 </div>
-
+</div>
 </section>
-
-<section>
+<!-- Why Choose Us -->
+<section style="background: var(--bg-light);">
 <h2 class="section-title">Why Choose Us</h2>
-
+<p class="section-subtitle">Commitment to safety, timely delivery, and international standards.</p>
 <div class="highlight">
-<ul>
-<li>✔️ Engineering Excellence</li>
-<li>✔️ Quality Assurance</li>
-<li>✔️ Safety First Approach</li>
-<li>✔️ Timely Project Delivery</li>
-<li>✔️ Experienced Technical Team</li>
-<li>✔️ Transparent Work Process</li>
-</ul>
+<div class="highlight-grid">
+<div class="highlight-item"><span>✓</span> Engineering Excellence</div>
+<div class="highlight-item"><span>✓</span> Quality Assurance</div>
+<div class="highlight-item"><span>✓</span> Safety First Approach</div>
+<div class="highlight-item"><span>✓</span> Timely Project Delivery</div>
+<div class="highlight-item"><span>✓</span> Experienced Technical Team</div>
+<div class="highlight-item"><span>✓</span> Transparent Work Process</div>
 </div>
-
+</div>
 </section>
-
+<!-- Contact Section -->
 <section id="contact">
 <h2 class="section-title">Contact Us</h2>
-
-<div class="contact">
-<h3>Anulit Trivenium Infra LLP</h3>
-<p>📍 2499, Ram Raghu Apartment, Kharagjeet Nagar, Mainpuri, Uttar Pradesh - 205001</p>
-<p>📞 +91 9410625262</p>
-<p>✉️ atinfrallp@gmail.com</p>
+<p class="section-subtitle">Let's discuss how we can partner on your next landmark project.</p>
+<div class="contact-container">
+<div class="contact-info">
+<div class="info-box">
+<h4>📍 Office Address</h4>
+<p>2499, Ram Raghu Apartment, Kharagjeet Nagar, Mainpuri, UP - 205001</p>
+</div>
+<div class="info-box">
+<h4>📞 Call Us</h4>
+<p>+91 9410625262</p>
+</div>
+<div class="info-box">
+<h4>✉️ Email Address</h4>
+<p>atinfrallp@gmail.com</p>
+</div>
+</div>
 <iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.964766486601!2d79.02671847524753!3d27.220255976465094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3975973e8ecc52f3%3A0xc17fe367a76706f4!2sAnu%20Brother&#39;s%20(ABC)!5e0!3m2!1sen!2sin!4v1781967104482!5m2!1sen!2sin"
+src="[https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.964766486601!2d79.02671847524753!3d27.220255976465094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3975973e8ecc52f3%3A0xc17fe367a76706f4!2sAnu%20Brother&#39;s%20(ABC)!5e0!3m2!1sen!2sin!4v1781967104482!5m2!1sen!2sin](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.964766486601!2d79.02671847524753!3d27.220255976465094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3975973e8ecc52f3%3A0xc17fe367a76706f4!2sAnu%20Brother&#39;s%20(ABC)!5e0!3m2!1sen!2sin!4v1781967104482!5m2!1sen!2sin)"
 width="100%"
-height="350"
-style="border:0;border-radius:10px;margin-top:15px;"
+height="380"
+style="border:0; border-radius:12px;"
 loading="lazy">
 </iframe>
 </div>
 </section>
-
+<!-- Feedback/Review Section -->
+<section id="reviews">
+<h2 class="section-title">Customer Feedback</h2>
+<p class="section-subtitle">We value your feedback and continuously strive to improve our infrastructure services.</p>
+<p>Please share your experience with Anulit Trivenium Infra LLP.</p>
+<a href="[https://www.google.com/maps/search/?api=1&query=Anu+Brother's+(ABC)+Mainpuri](https://www.google.com/maps/search/?api=1&query=Anu+Brother's+(ABC)+Mainpuri)" target="_blank" class="review-btn">
+Submit Feedback On Google
+</a>
+</section>
+<!-- Footer -->
 <footer>
 © 2026 Anulit Trivenium Infra LLP | All Rights Reserved
 </footer>
-<section id="reviews" style="padding:50px 20px; text-align:center; background:#f8f9fa;">
-    
-    <h2 style="color:#1e3a5f;">Customer Feedback</h2>
-    
-    <p>
-        We value your feedback and continuously strive to improve our services.
-        Please share your experience with Anulit Trivenium Infra LLP.
-    </p>
-
-<a href="https://www.google.com/maps/search/?api=1&query=Anu+Brother's+(ABC)+Mainpuri"
-       target="_blank"
-       style="display:inline-block;
-              margin-top:15px;
-              padding:12px 25px;
-              background:#1e3a5f;
-              color:white;
-              text-decoration:none;
-              border-radius:5px;">
-        Submit Feedback
-    </a>
-
-</section>
+</body>
+</html>
